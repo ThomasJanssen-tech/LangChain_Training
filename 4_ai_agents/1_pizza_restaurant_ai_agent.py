@@ -53,9 +53,6 @@ The query is as follows:
 
 The chat history is as follows:
 {chat_history}
-
-Please provide a concise and informative response based on the retrieved information.
-If you don't know the answer, say "I don't know" (and don't provide a source).
                                       
 You can use the scratchpad to store any intermediate results or notes.
 The scratchpad is as follows:
