@@ -8,8 +8,6 @@ import streamlit as st
 
 # import langchain
 from langchain_classic.agents import AgentExecutor
-from langchain_chroma import Chroma
-from langchain_openai import OpenAIEmbeddings
 from langchain.chat_models import init_chat_model
 from langchain_core.messages import AIMessage, HumanMessage
 from langchain_classic.agents import create_tool_calling_agent
