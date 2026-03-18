@@ -77,6 +77,9 @@ def retrieve(query: str):
     """Retrieve information related to a query."""
     retrieved_docs = vector_store.similarity_search(query, k=2)
 
+    print("Retrieved documents:")
+    print(retrieved_docs)
+
     serialized = ""
 
     for doc in retrieved_docs:
