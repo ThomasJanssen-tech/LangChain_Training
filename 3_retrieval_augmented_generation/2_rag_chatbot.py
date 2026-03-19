@@ -48,7 +48,10 @@ prompt = PromptTemplate.from_template("""
 You are a helpful assistant. You will be provided with a query and a chat history.
 Your task is to retrieve relevant information from the vector store and provide a response.
 For this you use the tool 'retrieve' to get the relevant information.
-                                      
+
+You ONLY answer based on the chunks you receive from your RAG database.
+You are NOT allowed to use any prior knowledge or make assumptions. You can only answer based on the retrieved information.
+                                                                     
 The query is as follows:                    
 {input}
 
