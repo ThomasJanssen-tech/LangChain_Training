@@ -117,7 +117,7 @@ def create_order(customer_name: str, order_time: str):
     VALUES (?, ?)
     """, (customer_name, order_time))
 
-
+    conn.commit()
     conn.close()
 
     return True
@@ -134,17 +134,17 @@ def add_item_to_order(order_id: int, pizza_id: int, quantity: int):
 
     cursor.execute("""
     INSERT INTO restaurant_orders_items (order_id, pizza_id, quantity)
-    VALUES (?, ?)
+    VALUES (?, ?, ?)
     """, (order_id, pizza_id, quantity))
 
-
+    conn.commit()
     conn.close()
 
     return cursor.lastrowid
 
 
 # combining all tools
-tools = [fetch_restaurant_info, fetch_menu, create_order]
+tools = [fetch_restaurant_info, fetch_menu, create_order, add_item_to_order]
 
 # initiating the agent
 agent = create_tool_calling_agent(llm, tools, prompt)
