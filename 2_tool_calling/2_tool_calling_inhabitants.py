@@ -49,7 +49,7 @@ The scratchpad is as follows:
 def get_country_inhabitants(country_iso_code: str):
     """Retrieve information related to a query. Be aware that the input is the 3 digit ISO code of a country, not the country name."""
 
-    conn = sqlite3.connect("2_tool_calling/world_data.db")
+    conn = sqlite3.connect("world_data.db")
     cursor = conn.cursor()
 
     # TODO: voeg hier je eigen SQL query toe
