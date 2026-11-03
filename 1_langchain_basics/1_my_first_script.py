@@ -7,7 +7,7 @@ from langchain_openai import ChatOpenAI
 #from langchain_anthropic import ChatAnthropic
 #from langchain_community.llms import Ollama
 
-llm = ChatOpenAI()
+llm = ChatOpenAI(model="gpt-5.6")
 
 output = llm.invoke("why is the sky blue?")
 
