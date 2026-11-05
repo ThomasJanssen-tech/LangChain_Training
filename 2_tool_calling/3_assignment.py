@@ -30,7 +30,7 @@ def get_crypto_price(ticker: str):
     data = response.json()
 
     price = data[coin_id]["usd"]
-    return price
+    return str(price)
 
 
 ticker = input("Enter crypto ticker (e.g. BTC): ")
