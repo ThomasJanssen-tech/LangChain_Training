@@ -24,7 +24,8 @@ load_dotenv()
 
 llm = init_chat_model(
     os.getenv("CHAT_MODEL"),
-    temperature=0.5
+    temperature=0.5,
+    reasoning_effort="none",
 )
 
        
