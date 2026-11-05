@@ -37,7 +37,8 @@ vector_store = Chroma(
 
 llm = init_chat_model(
     os.getenv("CHAT_MODEL"),
-    temperature=0
+    temperature=0,
+    reasoning_effort="none",
 )
 
        
